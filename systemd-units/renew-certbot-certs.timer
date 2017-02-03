@@ -1,0 +1,17 @@
+[Unit]
+Description=Run certbot renew apx every 12 hours.
+
+[Timer]
+Persistent=true
+
+OnBootSec=3min
+
+OnUnitActiveSec=12h
+
+# RandomizedDelaySec=1h
+# RandomSec=1h
+
+AccuracySec=60
+
+[Install]
+WantedBy=timers.target
